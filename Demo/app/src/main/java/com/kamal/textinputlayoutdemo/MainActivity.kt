@@ -19,9 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         textInput = findViewById(R.id.textInput) as TextInputLayout
 
-        val wordtoSpan = SpannableString("Hello world")
+        val wordtoSpan = SpannableString("Hello world*")
         wordtoSpan.setSpan(
-            ForegroundColorSpan(Color.BLUE), 2, 6,
+            ForegroundColorSpan(Color.BLUE), 11, 12,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
         )
         textInput!!.hint = wordtoSpan
