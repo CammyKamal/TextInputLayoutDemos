@@ -2,6 +2,7 @@ package com.kamal.textinputlayoutdemo
 
 import android.graphics.Color
 import android.os.Bundle
+import android.text.Html
 import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         textInput = findViewById(R.id.textInput) as TextInputLayout
 
-        val wordtoSpan = SpannableString("Hello world*")
+        val wordtoSpan = SpannableString(Html.fromHtml("Hello world <sup>*</sup>"))
         wordtoSpan.setSpan(
             ForegroundColorSpan(Color.BLUE), 11, 12,
             Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
